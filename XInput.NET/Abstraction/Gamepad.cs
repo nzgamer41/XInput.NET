@@ -671,6 +671,122 @@ namespace XInputNET.Abstraction
             return output;
         }
 
+        /// <summary>
+        /// Creates a textual representation of the gamepad state.
+        /// </summary>
+        /// <returns>The gamepad state string.</returns>
+        public string GetButton()
+        {
+            string output = "";
+            if (this.A)
+            {
+                output += "A";
+                return output;
+            }
+            if (this.B)
+            {
+                output += "B";
+                return output;
+            }
+            if (this.X)
+            {
+                output += "X";
+                return output;
+            }
+            if (this.Y)
+            {
+                output += "Y";
+                return output;
+            }
+            if (this.L)
+            {
+                output += "L";
+                return output;
+            }
+            if (this.R)
+            {
+                output += "R";
+                return output;
+            }
+
+            if (this.Start)
+            {
+                output += "Start";
+                return output;
+            }
+
+            if (this.Back)
+            {
+                output += "Back";
+                return output;
+            }
+
+            if (this.DPadUp)
+            {
+                output += "DPadUp";
+                return output;
+            }
+
+            if (this.DPadDown)
+            {
+                output += "DPadDown";
+                return output;
+            }
+
+            if (this.DPadLeft)
+            {
+                output += "DPadLeft";
+                return output;
+            }
+
+            if (this.DPadRight)
+            {
+                output += "DPadRight";
+                return output;
+            }
+
+            if (this.LeftThumbPress)
+            {
+                output += "LeftThumbPress";
+                return output;
+            }
+
+            if (this.RightThumbPress)
+            {
+                output += "RightThumbPress";
+                return output;
+            }
+
+            if (this.LeftThumbX != 0)
+            {
+                return "LeftThumbX";
+            }
+            if (this.LeftThumbY != 0)
+            {
+                return "LeftThumbY";
+            }
+            if (this.RightThumbX != 0)
+            {
+                return "RightThumbX";
+            }
+            if (this.RightThumbY != 0)
+            {
+                return "RightThumbY";
+            }
+            if (this.LeftTrigger > 0)
+            {
+                return "LeftTrigger";
+            }
+            if (this.RightTrigger > 0)
+            {
+                return "RightTrigger";
+            }
+            else
+            {
+                throw new Exception("WTF button did you push, button does not exist");
+            }
+        }
+
         #endregion
 
         #region Events
